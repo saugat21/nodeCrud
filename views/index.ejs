@@ -1,0 +1,57 @@
+<%- include('layout/header') %>
+    <div class="btn-container mt-4 mx-5 d-flex gap-3">
+        <a href="/add"><button class="btn btn-success">Add</button></a>
+    </div>
+
+    <!-- creatinng <table></table>  -->
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-lg-12">
+                <div class="table-resposive">
+                    <table class="table table-striped text-center">
+                        <thead>
+                            <tr class="table-dark">
+                                <th>Id</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% users.forEach((item,index)=>{%>
+                                <tr>
+                                    <td>
+                                        <%= index + 1 %>
+                                    </td>
+                                    <td>
+                                        <%= item.username %>
+                                    </td>
+                                    <td>
+                                        <%= item.email %>
+                                    </td>
+                                    <td>
+                                        <%= item.address %>
+                                    </td>
+                                    <td>
+                                        <a href="/edit/<%= item._id %>" class="text-success"><i
+                                                class="fas fa-edit fa-lg mx-1"></i></a>
+                                        <a href="/delete/<%= item._id %>" class="text-danger"><i
+                                                class="fas fa-trash fa-lg mx-1"></i></a>
+                                    </td>
+                                </tr>
+                                <% }) %>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <%- include('layout/footer') %>

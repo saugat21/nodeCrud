@@ -1,0 +1,49 @@
+<%- include('layout/header') %>
+    <div class="btn-container mt-4 mx-5 d-flex gap-3">
+        <a href="/"><button class="btn btn-primary">Home</button></a>
+    </div>
+
+    <!-- creatinng <table></table>  -->
+    <!-- <div class="container">
+        <div class="row">
+            <form action="/add" method="post">
+                <div class="mb-3">
+                    <label for="name">Username</label>
+                    <input type="text" name="username" placeholder="Enter Username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Enter email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="Address">Address</label>
+                    <input type="text" name="address" placeholder="Enter Address" required>
+                </div>
+                <button type="submit" class="btn btn-secondary">Submit</button>
+            </form>
+        </div>
+    </div> -->
+
+    <div class="container w-50 mt-5">
+        <h2 class="text-center mb-4">Registration Form</h2>
+        <form method="post" action="/add">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" name="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" class="form-control" name="address" placeholder="Enter address" required>
+            </div>
+            <button type="submit" class="btn btn-secondary mt-3 mx-5">Submit</button>
+        </form>
+    </div>
+
+
+
+
+    <%- include('layout/footer') %>
